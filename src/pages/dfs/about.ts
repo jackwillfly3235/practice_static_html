@@ -1,14 +1,15 @@
 import { html } from 'static-html';
 import * as fs from "fs";
-import * as path from "path";
 
-(() => {
-    const javaFilePath = path.resolve(__dirname, '/Users/daizhixia/work/practice/src/com/company/apple/KokoEatingBananas.java');
-    
-    const fileContent = fs.readFileSync(javaFilePath, { encoding: 'utf-8' });
-    console.log("fileContent", fileContent)
-})();
-
+const data = fs.readFileSync("/Users/daizhixia/work/practice/src/com/company/apple/FirstMissingPositive.java", { encoding: 'utf-8' });
+const lines = data.split("\n");
+let code = lines.map(line => {
+    if (line.includes("package")) {
+        return "```java";
+    } else {
+        return line;
+    }
+}).join("\n");
+code += "```";
 export default () =>
-
-html`<p>You are on the about page</p>`;
+html`${code}`;

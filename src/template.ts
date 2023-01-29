@@ -18,12 +18,8 @@ html`<!doctype html>
   <header>
     <h1>Welcome to your static website</h1>
   </header>
-  <md-block>` + "```java" +
-  `
-  <main>
+  <md-block>
     ${content}
-  </main>
-  ` + "```" + `
   </md-block>
 </body>
 </html>
