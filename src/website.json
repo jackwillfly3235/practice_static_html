@@ -1,0 +1,15 @@
+{
+  "title": "Website title",
+  "pages": [
+    {
+      "path": "",
+      "name": "index",
+      "title": "Homepage title"
+    },
+    {
+      "path": "dfs",
+      "name": "about",
+      "title": "About page title"
+    }
+  ]
+}
